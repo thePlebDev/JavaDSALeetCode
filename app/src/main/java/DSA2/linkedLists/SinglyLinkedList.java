@@ -112,7 +112,28 @@ public class SinglyLinkedList<E> {
             startingString += current.getElement() + "---->";
             current = current.getNext();
         }
+        if(startingString.length() ==0){
+            startingString += "EMPTY";
+        }
         return startingString;
+    }
+    public int indexOf(E element){
+        Node<E> current = head;
+        int index = 0;
+
+        while (current != null){
+            if(element == current.getElement()){
+                return index;
+            }
+            index++;
+            current = current.getNext();
+        }
+        return -1;
+    }
+
+    public E remove(E element){
+        int index = this.indexOf(element);
+        return this.removeAt(index);
     }
 
 

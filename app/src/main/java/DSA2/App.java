@@ -15,7 +15,8 @@ public class App {
         singlyLinkedList.addFirst(4);
         singlyLinkedList.addFirst(3);
         singlyLinkedList.addLast(5);
-        System.out.println(singlyLinkedList.size());
+        singlyLinkedList.remove(44);
+        System.out.println(singlyLinkedList.toString());
 
         //System.out.println(new App().getGreeting());
     }
